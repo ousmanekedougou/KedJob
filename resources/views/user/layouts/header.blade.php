@@ -8,9 +8,9 @@
 					<div class="header_top_menu_address">
 						<div class="header_top_menu_address_inner">
 							<ul>
-								<li><a href="#"><i class="fa fa-envelope-o"></i>example@gmail.com</a></li>
-								<li><a href="#"><i class="fa fa-map-marker"></i>24/5, 1st Floor, Kurigram</a></li>
-								<li><a href="#"><i class="fa fa-phone"></i>+ (1800) 456 7890</a></li>
+								<li><a href="#"><i class="fa fa-envelope-o"></i>ousmanelaravel@gmail.com</a></li>
+								<li><a href="#"><i class="fa fa-map-marker"></i>Kedougou - Dalaba</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i>+221 77 000 00 00</a></li>
 							</ul>
 						</div>
 					</div>
@@ -19,10 +19,10 @@
 					<div class="header_top_menu_icon">
 						<div class="header_top_menu_icon_inner">
 							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -50,10 +50,12 @@
 				<div class="col-md-3">
 					<div class="logo mt-4">
 						<a class="logo_img" href="{{ url('/') }}" title="KedJobs">
-							<img src="{{asset('user/assets/images/1.png')}}" alt="" />
+							{{--<img src="{{asset('user/assets/images/1.png')}}" alt="" />--}}
+							<h1 class="text-primary active dtbtn">KedJobs</h1>
 						</a>
 						<a class="main_sticky" href="{{ url('/') }}" title="techno">
-							<img src="{{asset('user/assets/images/logo.png')}}" alt="KedJobs" />
+							{{--<img src="{{asset('user/assets/images/logo.png')}}" alt="KedJobs" />--}}
+							<h1 class="text-white">KedJobs</h1>
 						</a>
 					</div>
 				</div>
@@ -62,8 +64,8 @@
 						<ul class="nav_scroll">
 							<li><a href="{{ url('/') }}">  Acceuil</a></li>
 							<li><a href="{{ route('company.index') }}">  Entreprise</a></li>
-							<li><a href="index.html">  Anonces</a></li>
-							<li><a href="index.html"> Nos Services</a></li>
+							<li><a href="">  Anonces</a></li>
+							<li><a href=""> Nos Services</a></li>
 							{{--<li><a href="{{ route('blog.index') }}">  Blog</a></li>--}}
 							<li><a href="{{ route('contact.index') }}">  Contact</a></li>
 							{{--
@@ -106,8 +108,8 @@
 				<ul class="nav_scroll">
 					<li><a href="{{ url('/') }}">   Acceuil</a></li>
 					<li><a href="{{ route('company.index') }}">  Entreprise</a></li>
-					<li><a href="index.html"> Anonces</a></li>
-					<li><a href="index.html"> Nos Services</a></li>
+					<li><a href=""> Anonces</a></li>
+					<li><a href=""> Nos Services</a></li>
 					{{--<li><a href="{{ route('blog.index') }}">  Blog</a></li>--}}
 					<li><a href="{{ route('contact.index') }}">   Contact</a></li>
 					{{--

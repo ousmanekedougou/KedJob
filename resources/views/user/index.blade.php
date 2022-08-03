@@ -16,14 +16,14 @@
 							<div class="slider_content">
 								<div class="slider_text">
 									<div class="slider_text_inner">
-										<h5>Total IT Solution Here</h5>
-										<h1>Best IT solution agency</h1>
-										<h1>for your Business </h1>
+										<h5>Solution informatique totale ici</h5>
+										<h1>Meilleure agence de solutions informatiques</h1>
+										<h1>pour votre entreprise </h1>
 									</div>
 									<div class="slider_button pt-5 d-flex">
 										<div class="button">
-											<a href="#">How IT Work <i class="fa fa-long-arrow-right"></i></a>
-											<a class="active" href="#">IT Services <i
+											<a href="#">Comment ça marche <i class="fa fa-long-arrow-right"></i></a>
+											<a class="active" href="#">Services informatiques <i
 													class="fa fa-long-arrow-right"></i></a>
 										</div>
 									</div>
@@ -50,14 +50,14 @@
 							<div class="slider_content">
 								<div class="slider_text">
 									<div class="slider_text_inner">
-										<h5>Total IT Solution Here</h5>
-										<h1>Best IT solution agency</h1>
-										<h1>for your Business </h1>
+										<h5>Solution informatique totale ici</h5>
+										<h1>Meilleure agence de solutions informatiques</h1>
+										<h1>pour votre entreprise </h1>
 									</div>
 									<div class="slider_button pt-5 d-flex">
 										<div class="button">
-											<a href="#">How IT Work <i class="fa fa-long-arrow-right"></i></a>
-											<a class="active" href="#">IT Services <i
+											<a href="#">Comment ça marche <i class="fa fa-long-arrow-right"></i></a>
+											<a class="active" href="#">Services informatiques <i
 													class="fa fa-long-arrow-right"></i></a>
 										</div>
 									</div>
@@ -82,7 +82,7 @@
 	<!--==================================================-->
 
 
-
+	{{--
     <!--==================================================-->
 	<!----- Start Techno Flipbox Top Feature Area ----->
 	<!--==================================================-->
@@ -200,6 +200,93 @@
 	<!--==================================================-->
 	<!----- End Techno Flipbox Top Feature Area ----->
 	<!--==================================================-->
+	--}}
+
+
+	<!--==================================================-->
+	<!----- Start Techno  Feature Area ----->
+	<!--==================================================-->
+	<div class="feature_area">
+		<div class="container">
+			<div class="row nagative_margin3">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="feature_style_three mb-4">
+						<div class="feature_style_tree_thumb">
+							<img src="{{asset('user/assets/images/feature1.jpg')}}" alt="" />
+						</div>
+						<div class="feature_style_tree_content">
+							<div class="feature_style_thre_icon pb-4">
+								<div class="icon">
+									<i class="flaticon-system"></i>
+								</div>
+							</div>
+							<div class="feature_style_three_title">
+								<h4>Front-End design & development</h4>
+							</div>
+							<div class="feature_style_three_text pt-3">
+								<p>Give you a complete account of the system and expound</p>
+							</div>
+							<div class="feature_style_three_butoon">
+								<a href="#">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="feature_style_three mb-4">
+						<div class="feature_style_tree_thumb">
+							<img src="{{asset('user/assets/images/feature2.jpg')}}" alt="" />
+						</div>
+						<div class="feature_style_tree_content">
+							<div class="feature_style_thre_icon pb-4">
+								<div class="icon">
+									<i class="flaticon-chart"></i>
+								</div>
+							</div>
+							<div class="feature_style_three_title">
+								<h4>UX and UI design strategy</h4>
+							</div>
+							<div class="feature_style_three_text pt-3">
+								<p>Give you a complete account of the system and expound</p>
+							</div>
+							<div class="feature_style_three_butoon">
+								<a href="#">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="feature_style_three mb-4">
+						<div class="feature_style_tree_thumb">
+							<img src="{{asset('user/assets/images/feature3.jpg')}}" alt="" />
+						</div>
+						<div class="feature_style_tree_content">
+							<div class="feature_style_thre_icon pb-4">
+								<div class="icon">
+									<i class="flaticon-developer"></i>
+								</div>
+							</div>
+							<div class="feature_style_three_title">
+								<h4>Software development & solution</h4>
+							</div>
+							<div class="feature_style_three_text pt-3">
+								<p>Give you a complete account of the system and expound</p>
+							</div>
+							<div class="feature_style_three_butoon">
+								<a href="#">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!----- End Techno Feature Area ----->
+	<!--==================================================-->
+
+
 
 
 	<!--==================================================-->
@@ -223,18 +310,18 @@
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
 					<div class="section_title text_left mb-40 mt-3">
 						<div class="section_sub_title uppercase mb-3">
-							<h6>30 YEARS OF EXPERIENCE</h6>
+							<h6>30 ANS D'EXPÉRIENCE</h6>
 						</div>
 						<div class="section_main_title">
-							<h1>Preparing For Your Success</h1>
-							<h1>Provide Best <span>IT Solutions.</span></h1>
+							<h1>Préparer votre succès</h1>
+							<h1>Fournir les meilleures  <span>solutions informatiques.</span></h1>
 						</div>
 						<div class="em_bar">
 							<div class="em_bar_bg"></div>
 						</div>
 						<div class="section_content_text pt-4">
-							<p>We are privileged to work with hundred future thinking awesom business including many of
-								the world’s top hardware</p>
+							<p>Nous avons le privilège de travailler avec des centaines d'entreprises géniales qui pensent à l'avenir, y compris de nombreuses
+le meilleur matériel au monde</p>
 						</div>
 					</div>
 					<div class="singel_about_left mb-30">
@@ -245,8 +332,8 @@
 								</div>
 							</div>
 							<div class="singel-about-content">
-								<h5>Warranty Management</h5>
-								<p>Morem Ipsum is simply dummy text of the printing and pepesetting found.</p>
+								<h5>Gestion de la garantie</h5>
+								<p>Morem Ipsum est simplement un texte factice de l'impression et de la mise en page trouvées.</p>
 							</div>
 						</div>
 						<div class="singel_about_left_inner">
@@ -256,8 +343,8 @@
 								</div>
 							</div>
 							<div class="singel-about-content">
-								<h5>Quality Control System</h5>
-								<p>Morem Ipsum is simply dummy text of the printing and pepesetting found.</p>
+								<h5>Système de contrôle de la qualité</h5>
+								<p>Morem Ipsum est simplement un texte factice de l'impression et de la mise en page trouvées.</p>
 							</div>
 						</div>
 					</div>
@@ -337,11 +424,10 @@
 				<div class="col-lg-12">
 					<div class="section_title white text_center mb-60 mt-3">
 						<div class="section_sub_title uppercase mb-3">
-							<h6>OBTENIR UN DEVIS</h6>
 						</div>
 						<div class="section_main_title">
-							<h1>Faire un</h1>
-							<h1>Conseiller gratuit</h1>
+							<h1>Faites nous</h1>
+							<h1>part de votre avis</h1>
 						</div>
 						<div class="em_bar">
 							<div class="em_bar_bg"></div>
@@ -413,6 +499,8 @@
 	<!----- End Techno Contact Area ----->
 	<!--==================================================-->
 
+
+	{{--
 	<!--==================================================-->
 	<!----- Start Techno Blog Area ----->
 	<!--==================================================-->
@@ -519,7 +607,7 @@
 	<!--==================================================-->
 	<!----- End Techno Blog Area ----->
 	<!--==================================================-->
-
+	--}}
 @endsection
 
 @section('js')

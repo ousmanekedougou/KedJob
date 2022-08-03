@@ -12,12 +12,12 @@
 				<div class="col-lg-12">
 					<div class="breatcome_title">
 						<div class="breatcome_title_inner pb-2">
-							<h2>Plus de 100 entreprises en collaboration avec notre agnec a vos services</h2>
+							<h2>Plus de {{$companys->count()}} entreprises en collaboration avec notre plateforme a vos services</h2>
 						</div>
 						<div class="breatcome_content">
 							<ul>
 								<li> <span>Préparer votre succès
-F                                       ournir les meilleures solutions informatiques.</span></li>
+									fournir les meilleures solutions de l'information.</span></li>
 							</ul>
 						</div>
 					</div>
@@ -39,10 +39,10 @@ F                                       ournir les meilleures solutions informat
 				<div class="col-lg-12">
 					<div class="section_title text_center mb-55">
 						<div class="section_sub_title uppercase mb-3">
-							<h6>SERVICES</h6>
+							<h6>ENTREPRISES</h6>
 						</div>
 						<div class="section_main_title">
-							<h1>Provide Exclusive Services</h1>
+							<h1>Fournir des offres exclusives</h1>
 						</div>
 						<div class="em_bar">
 							<div class="em_bar_bg"></div>

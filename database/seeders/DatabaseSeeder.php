@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
             'slug' => $faker->slug(),
             'password' => '$2y$10$ul/8vG9Wg8fVrVZBizWqr.nqEZmEaLazkkOEjmBbbNie/Kt4EKp6S',
             'companyLogo' => $faker->imageUrl(50, 50), 
+            'about' => $faker->text() 
         ]);
 
         User::create([
@@ -61,7 +62,7 @@ class DatabaseSeeder extends Seeder
             'adress' => $faker->address(),
             'image' => $faker->imageUrl(50, 50),
             'is_admin' => 1,
-            'is_active' => 0,
+            'is_active' => 1,
             'confirmation_token' => Null,
             'slug' => $faker->slug(),
             'password' => '$2y$10$ul/8vG9Wg8fVrVZBizWqr.nqEZmEaLazkkOEjmBbbNie/Kt4EKp6S',

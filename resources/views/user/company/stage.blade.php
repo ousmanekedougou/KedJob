@@ -12,13 +12,17 @@
 				<div class="col-lg-12">
 					<div class="breatcome_title">
 						<div class="breatcome_title_inner pb-2">
-							<h2>{{$companyfirst->user->name}} vous offres Plus de {{$companys->count()}} offres @if($companyfirst->type == 0) d'emplois @else se stages @endif pour vous servire</h2>
+							<h2>{{$companyfirst->user->name}} vous offres Plus de {{$companys->count()}} offres @if($companyfirst->type == 0) d'emplois @else de stages @endif pour vous servire</h2>
 						</div>
 						<div class="breatcome_content">
 							<ul>
 								<li> <span>Préparer votre succès
-F                                       ournir les meilleures solutions informatiques.</span></li>
+									fournir les meilleures solutions de l'information.</span></li>
 							</ul>
+							<div class="button text-center" style="padding-top:10px;">
+								<a class="active" href="{{ route('company.show',$companyfirst->user->slug) }}">Des offres d'emplois <i
+										class="fa fa-long-arrow-right"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -42,16 +46,16 @@ F                                       ournir les meilleures solutions informat
 				<div class="col-lg-12">
 					<div class="section_title text_center mb-55">
 						<div class="section_sub_title uppercase mb-3">
-							<h6>SERVICES</h6>
+							<h6>OFFRES DE STAGES</h6>
 						</div>
 						<div class="section_main_title">
-							<h1>Service We Provide</h1>
+							<h1>Offres que nous fournissons</h1>
 						</div>
 						<div class="em_bar">
 							<div class="em_bar_bg"></div>
 						</div>
 						<div class="section_content_text pt-4">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. Ut enim advis minim veniam, quis nostrud exercitat</p>
+							<p>{{$companyfirst->about}}</p>
 						</div>
 					</div>
 				</div>

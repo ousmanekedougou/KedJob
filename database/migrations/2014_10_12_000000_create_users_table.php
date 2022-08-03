@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('confirmation_token')->nullable();
             $table->string('slug');
             $table->string('companyLogo')->nullable();
-            $table->string('about')->nullable();
+            $table->text('about')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

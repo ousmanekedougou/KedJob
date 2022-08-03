@@ -12,13 +12,7 @@
 				<div class="col-lg-12">
 					<div class="breatcome_title">
 						<div class="breatcome_title_inner pb-2">
-							<h2>Contact Style Three </h2>
-						</div>
-						<div class="breatcome_content">
-							<ul>
-								<li><a href="index.html">Home</a> <i class="fa fa-angle-right"></i> <a href="#">
-										Pages</a> <i class="fa fa-angle-right"></i> <span>Contact Three</span></li>
-							</ul>
+							<h2>Nos Contacter ici</h2>
 						</div>
 					</div>
 				</div>
@@ -38,16 +32,14 @@
 				<div class="col-lg-6">
 					<div class="section_title text_left mb-50 mt-3">
 						<div class="section_sub_title uppercase mb-3">
-							<h6>Contact Info</h6>
+							<h6>Informations de contact</h6>
 						</div>
 						<div class="section_main_title">
 							<h1>Entrer en contact</h1>
 						</div>
 						<div class="section_title_text pt-2">
 							<p>
-								Lorem ipsum dolor sit amet cotetur adipi sicing elit, sed do mod tempor incid idunt ut
-								labore etdolore emu some the and one baldbe dear sod ales justo sit amet urna auctor
-								scele risqu.
+								<span>Si vous êtes confrontés a quelques incomprehensions, merci de nous contacter par les adresse si dessous ou nous ecrire via ce formulaire. </span>
 							</p>
 						</div>
 						<div class="em_bar">
@@ -57,11 +49,10 @@
 					<div class="contact_address">
 						<div class="contact_address_company mb-3">
 							<ul>
-								<li><i class="fa fa-envelope-o"></i><span><a href="#">Contact@examplesite.com</a></span>
+								<li><i class="fa fa-envelope-o"></i><span><a href="#">ousmanelaravel@gmail.com</a></span>
 								</li>
-								<li><i class="fa fa-mobile"></i><span> +088 01314 183818</span></li>
-								<li><i class="fa fa-map-marker"></i> <span> 245, King Street, New York - 65432
-										NY.</span></li>
+								<li><i class="fa fa-mobile"></i><span> 770000000/780000000/</span></li>
+								<li><i class="fa fa-map-marker"></i> <span> Kedougou - Dalaba / Dakar - Rue 39x34 Medina </span></li>
 							</ul>
 						</div>
 					</div>

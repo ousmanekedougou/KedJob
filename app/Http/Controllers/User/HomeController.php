@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $temoignages = Testimonial::where('status',0)->get();
+        $temoignages = Testimonial::where('status',1)->get();
         return view('user.index',compact('temoignages'));
     }
 

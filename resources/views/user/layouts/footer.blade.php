@@ -51,7 +51,8 @@
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="widget widgets-company-info">
 						<div class="footer-bottom-logo pb-40">
-							<img src="assets/images/logo.png" alt="" />
+							{{--<img src="{{asset('user/assets/images/logo.png')}}" alt="" />--}}
+							<h1 class="text-white">KedJobs</h1>
 						</div>
 						<div class="company-info-desc">
 							<p>Condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam
@@ -61,7 +62,7 @@
 						<div class="follow-company-info pt-3">
 							<div class="follow-company-text mr-3">
 								<a href="#">
-									<p>Follow Us</p>
+									<p>Suivez-nous</p>
 								</a>
 							</div>
 							<div class="follow-company-icon">
@@ -75,7 +76,7 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="widget widget-nav-menu">
-						<h4 class="widget-title pb-4">Our Services</h4>
+						<h4 class="widget-title pb-4">Autres liens</h4>
 						<div class="menu-quick-link-container ml-4">
 							<ul id="menu-quick-link" class="menu">
 								<li><a href="#">Marketing Strategy</a></li>
@@ -90,19 +91,19 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="widget widgets-company-info">
-						<h3 class="widget-title pb-4">Company Address</h3>
+						<h3 class="widget-title pb-4">Adresse de la société</h3>
 						<div class="company-info-desc">
 							<p>Porem awesome dolor sitework amet, consetur acing elit, sed do eiusmod ligal
 							</p>
 						</div>
 						<div class="footer-social-info">
-							<p><span>Address :</span>54/1 New dhas sorini Asut, Melbord Austria.</p>
+							<p><span>Address :</span>Kedougou - Dalaba</p>
 						</div>
 						<div class="footer-social-info">
-							<p><span>Phone :</span>54786547521</p>
+							<p><span>Phone :</span>+221 77 000 00 00</p>
 						</div>
 						<div class="footer-social-info">
-							<p><span>Email :</span>demo@example.com</p>
+							<p><span>Email:</span>ousmanelaravel@gmail.com</p>
 						</div>
 
 					</div>
@@ -110,7 +111,7 @@
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div id="em-recent-post-widget">
 						<div class="single-widget-item">
-							<h4 class="widget-title pb-3">Popular Post</h4>
+							<h4 class="widget-title pb-3">Poste populaire</h4>
 							<div class="recent-post-item active pb-3">
 								<div class="recent-post-image mr-3">
 									<a href="#">
@@ -149,15 +150,15 @@
 				<div class="col-lg-6 col-md-6">
 					<div class="footer-bottom-content">
 						<div class="footer-bottom-content-copy">
-							<p>© 2022 Techno.All Rights Reserved. </p>
+							<p>Copyright &copy; 2022-{{ Carbon\carbon::now()->year }} KedJobs.Tous les droits sont réservés. </p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6">
 					<div class="footer-bottom-right">
 						<div class="footer-bottom-right-text">
-							<a class="absod" href="#">Privacy Policy </a>
-							<a href="#"> Terms & Conditions</a>
+							<a class="absod" href="#">Politique de confidentialité </a>
+							<a href="#"> termes & conditions</a>
 						</div>
 					</div>
 				</div>

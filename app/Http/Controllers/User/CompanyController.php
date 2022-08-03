@@ -135,7 +135,7 @@ class CompanyController extends Controller
     public function edit($slug)
     {
         $user = User::where('slug',$slug)->first();
-        $companyfirst = Job::where('user_id',$user->id)->where('type',0)->first();
+        $companyfirst = Job::where('user_id',$user->id)->where('type',1)->first();
         $companys = Job::where('user_id',$user->id)->where('type',1)->get();
         return view('user.company.stage',compact('companys','companyfirst'));
     }
