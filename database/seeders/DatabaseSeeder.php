@@ -10,7 +10,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use phpDocumentor\Reflection\Types\Null_;
-
+use \Faker\Factory as Faker;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $faker = \Faker\Factory::create();
+        $faker = Faker::create();
 
         User::create([
             'name' => 'Ousmane Diallo',
