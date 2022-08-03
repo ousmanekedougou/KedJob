@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Null_;
 
 class AdminController extends Controller
 {
@@ -81,7 +82,10 @@ class AdminController extends Controller
             'is_active' => 'required|boolean',
         ]);
         User::where('id',$id)->update(
-            ['is_active' => $request->is_active]
+            [
+                'is_active' => $request->is_active,
+                'confirmation_token' => Null
+            ]
         );
         Toastr::success('Ce compte a ete modifier avec succes', 'Compte Modifier', ["positionClass" => "toast-top-right"]);
         return back();
