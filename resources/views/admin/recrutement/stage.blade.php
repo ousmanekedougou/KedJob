@@ -9,12 +9,8 @@
 					<div class="page-inner py-5">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
-								<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
-								<h5 class="text-white op-7 mb-2">Free Bootstrap 4 Admin Dashboard</h5>
-							</div>
-							<div class="ml-md-auto py-2 py-md-0">
-								<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
-								<a href="#" class="btn btn-secondary btn-round">Add Customer</a>
+								<h2 class="text-white pb-2 fw-bold">Tableau de board</h2>
+								<h5 class="text-white op-7 mb-2">Vous Comptez {{ $stages->count() }} demandes de stages dont 30 non consulter </h5>
 							</div>
 						</div>
 					</div>
@@ -153,27 +149,27 @@
 																											</div>
 
 																											<div class="info-post ml-4 ">
-																												<p class="username"><i class="fa fa-envelope"></i> Email : </p>
+																												<p class="username"><i class="fa fa-envelope"></i> Email</p>
 																												<p class="date text-muted" style="margin-top:-15px;">{{ $stage->email }}</p>
 																											</div>
 
 																											<div class="info-post ml-4 ">
-																												<p class="username"><i class="fa fa-mobile"></i> Telephone : </p>
+																												<p class="username"><i class="fa fa-mobile"></i> Telephone</p>
 																												<p class="date text-muted" style="margin-top:-15px;">{{ $stage->phone }}</p>
 																											</div>
 
 																											<div class="info-post ml-4 ">
-																												<p class="username"><i class="fa fa-location-check"></i> Commune : </p>
+																												<p class="username"><i class="fa fa-location-check"></i> Commune</p>
 																												<p class="date text-muted" style="margin-top:-15px;"> {{$stage->commune->name}} </p>
 																											</div>
 
 																											<div class="info-post ml-4 ">
-																												<p class="username"><i class="fas fa-location-check"></i> Adress : </p>
+																												<p class="username"><i class="fas fa-location-check"></i> Adress</p>
 																												<p class="date text-muted" style="margin-top:-15px;">{{ $stage->adress }}</p>
 																											</div>
 
 																											<div class="info-post ml-4 ">
-																												<p class="username"><i class="fa fa-location-check"></i> Demande : </p>
+																												<p class="username"><i class="fa fa-location-check"></i> Demande</p>
 																												<p class="date text-muted" style="margin-top:-15px;"> @if($stage->type == 0) stage @else Stage @endif </p>
 																											</div>
 																										</div>

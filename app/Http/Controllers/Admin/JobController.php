@@ -116,9 +116,9 @@ class JobController extends Controller
     }
 
 
-    public function annonce($id)
+    public function annonce()
     {
-        $getEmploi = Job::where('id',$id)->where('user_id',Auth::user()->id)->first();
+        $getEmploi = Job::where('id',request()->annonce)->where('user_id',Auth::user()->id)->first();
         if ($getEmploi->type == 0) {
             $emplois = Recrutement::where('job_id',$getEmploi->job_id)->where('user_id',Auth::user()->id)->get();
             return view('admin.recrutement.emploi',compact('emplois'));

@@ -39,15 +39,24 @@
                                     </div>
                                 </div>
                                 <div class="separator-solid"></div>
-                                <p class="text-info mb-1" style="width: 100%;display:flex;flex-direction:row;">
-                                    <span style="float:left;">
+                                <p class="mb-1" style="width: 100%;display:flex;flex-direction:row;">
                                         @if($emploi->status == 1)
-                                            Publique
+                                            <span class="btn btn-success btn-rounded btn-xs" style="float:left;">
+                                                Publique
+                                            </span>
                                         @else
-                                            Non publique
+                                            <span class="btn btn-warning btn-rounded btn-xs" style="float:left;">
+                                                Non publique
+                                            </span>
                                         @endif
-                                    </span>
-                                    <a href="{{ route('admin.job.annonce',$emploi->id) }}" style="float:right;margin-left:45%;" class="btn btn-success btn-rounded btn-xs text-white"><i class="fa fa-eye"></i> Annonces</a>
+                                    <a href="{{ route('admin.job.annonce') }}" style="float:right;margin-left:45%;color:white;" class="btn btn-info btn-rounded btn-xs text-white"
+                                        onclick="event.preventDefault();
+                                			document.getElementById('annonce-form').submit();"
+                                    ><i class="fa fa-eye"></i> Annonces</a>
+                                    <form id="annonce-form" action="{{ route('admin.job.annonce') }}" method="GET" class="d-none">
+                                        @csrf
+                                        <input type="hidden" name="annonce" value="{{ $emploi->id }}">
+                                    </form>
                                 </p>
                                 <h4 class="">
                                     <a href="">

@@ -34,7 +34,7 @@ Route::prefix('/admin')->name('admin.')->group(function()
     Route::get('/stage', [App\Http\Controllers\Admin\JobController::class, 'stage'])->name('job.stage');
     Route::get('/employe', [App\Http\Controllers\Admin\JobController::class, 'employe'])->name('job.employe');
     Route::get('/stagiare', [App\Http\Controllers\Admin\JobController::class, 'stagiare'])->name('job.stagiare');
-    Route::get('/annonce/{id}', [App\Http\Controllers\Admin\JobController::class, 'annonce'])->name('job.annonce');
+    Route::get('/annonce', [App\Http\Controllers\Admin\JobController::class, 'annonce'])->name('job.annonce');
     Route::resource('/localite', 'App\Http\Controllers\Admin\LocaliteController');
     Route::get('/commune', [App\Http\Controllers\Admin\LocaliteController::class, 'commune'])->name('localite.commune');
     Route::resource('/contact', 'App\Http\Controllers\Admin\ContactController');
