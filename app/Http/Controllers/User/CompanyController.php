@@ -21,7 +21,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companys = User::where('is_admin',1)->where('is_active',1)->where('confirmation_token',null)->paginate(9);
+        $companys = User::where('is_admin',1)->where('is_active',1)
+        // ->where('confirmation_token',null)
+        ->paginate(9);
         return view('user.company.index',compact('companys'));
     }
 
