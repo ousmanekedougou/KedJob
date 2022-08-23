@@ -191,40 +191,40 @@
 
 
                     <!-- la partie de suppression des offres -->
-                    <div class="modal fade" id="addRowModalDestroy-{{ $emploi->id }}" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header no-bd">
-                                    <h5 class="modal-title">
-                                        <span class="fw-mediumbold text-center">
-                                        Suppression de  {{$emploi->title}}</span>
-                                    </h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <form method="POST" action="{{ route('admin.job.destroy',$emploi->id) }}">
-                                    {{ csrf_field() }}
-                                        {{ method_field('DELETE') }}
-                                    <div class="modal-body text-center">
-                                        <div class="row">
-                                            <div class="col-md-12 text-center">
-                                                <p>
-                                                    Etes vous sure de bien voiloire supprimer cette offre : <br> {{$emploi->title}}
-                                                </p>
+                        <div class="modal fade" id="addRowModalDestroy-{{ $emploi->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header no-bd">
+                                        <h5 class="modal-title">
+                                            <span class="fw-mediumbold text-center">
+                                            Suppression de  {{$emploi->title}}</span>
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form method="POST" action="{{ route('admin.job.destroy',$emploi->id) }}">
+                                        {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                        <div class="modal-body text-center">
+                                            <div class="row">
+                                                <div class="col-md-12 text-center">
+                                                    <p>
+                                                        Etes vous sure de bien voiloire supprimer cette offre : <br> {{$emploi->title}}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-danger">
-                                            {{ __('Supprimer') }}
-                                        </button>
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
-                                    </div>
-                                </form>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-danger">
+                                                {{ __('Supprimer') }}
+                                            </button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <!-- Fin de la partie des modifications des offres -->
 
 

@@ -13,7 +13,7 @@ class Recrutement extends Model
     
 
     protected $fillable = ['genre','name','email','phone','adress','image','cv','cni','motivation','extrait',
-        'type','user_id','profil','commune_id','job_id'
+        'type','user_id','profil','commune_id','job_id','view'
     ];
 
     public function user(){

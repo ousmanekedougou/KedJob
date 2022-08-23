@@ -183,6 +183,10 @@ class JobController extends Controller
         return back();
     }
 
+    public function view(){
+        Recrutement::where('id',request()->view)->update(['view' => 1]);
+    }
+
     /**
      * Remove the specified resource from storage.
      *

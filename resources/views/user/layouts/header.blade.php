@@ -108,10 +108,10 @@
 				<ul class="nav_scroll">
 					<li><a href="{{ url('/') }}">   Acceuil</a></li>
 					<li><a href="{{ route('company.index') }}">  Entreprise</a></li>
-					<li><a href=""> Anonces</a></li>
-					<li><a href=""> Nos Services</a></li>
-					{{--<li><a href="{{ route('blog.index') }}">  Blog</a></li>--}}
-					<li><a href="{{ route('contact.index') }}">   Contact</a></li>
+					<li><a href="{{ route('company.annonce') }}"> Anonces</a></li>
+					{{--<li><a href=""> Nos Services</a></li>--}}
+					{{--<li><a href="{{ route('blog.index') }}"> Blog</a></li>--}}
+					<li><a href="{{ route('contact.index') }}"> Contact</a></li>
 					{{--
 					<li><a href="#contact">Contact</a>
 						<ul class="sub-menu">

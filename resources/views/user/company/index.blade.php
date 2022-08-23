@@ -87,6 +87,7 @@
                     </div>
                 @endforeach
 			</div>
+			{{ $companys->links('user.layouts.paginate') }}
 		</div>
 	</div>
 

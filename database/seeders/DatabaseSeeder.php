@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'name' => 'Ousmane Diallo',
-            'email' => 'yabaye@gmail.com',
+            'email' => 'yabaye07@gmail.com',
             'phone' => $faker->phoneNumber(),
             'adress' => 'Kedougou',
             'image' => $faker->imageUrl(50, 50),

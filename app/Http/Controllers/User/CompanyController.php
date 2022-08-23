@@ -9,9 +9,8 @@ use App\Models\Admin\Recrutement;
 use App\Models\User;
 use App\Notifications\RecrutementJob;
 use Brian2694\Toastr\Facades\Toastr;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-
-use function Ramsey\Uuid\v1;
 
 class CompanyController extends Controller
 {
@@ -22,7 +21,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companys = User::where('is_admin',1)->where('is_active',1)->where('confirmation_token',null)->get();
+        $companys = User::where('is_admin',1)->where('is_active',1)->where('confirmation_token',null)->paginate(9);
         return view('user.company.index',compact('companys'));
     }
 
@@ -35,6 +34,9 @@ class CompanyController extends Controller
     {
         //
     }
+
+
+    
 
     /**
      * Store a newly created resource in storage.
@@ -105,7 +107,8 @@ class CompanyController extends Controller
             'type' => $request->type,
             'user_id' => $request->user_id,
             'job_id' => $request->job_id,
-            'profil' => $profil
+            'profil' => $profil,
+            'view' => 0
         ]);
         $user->notify(new RecrutementJob);
         Toastr::success('Votre inscription a bien ete enregistre', 'Inscription', ["positionClass" => "toast-top-right"]);
@@ -121,9 +124,14 @@ class CompanyController extends Controller
     public function show($slug)
     {
         $user = User::where('slug',$slug)->first();
-        $companyfirst = Job::where('user_id',$user->id)->where('type',0)->first();
-        $companys = Job::where('user_id',$user->id)->where('type',0)->get();
-        return view('user.company.emploi',compact('companys','companyfirst'));
+        $companyfirst = Job::where('user_id',$user->id)->where('type',0)->where('expiration_at','>=',Carbon::today())->where('status',1)->first();
+        if ($companyfirst) {
+            $companys = Job::where('user_id',$user->id)->where('type',0)->where('expiration_at','>=',Carbon::today())->where('status',1)->paginate(9);
+            return view('user.company.emploi',compact('companys','companyfirst'));
+        }else {
+            Toastr::warning('Cette offres n\'est plus valide', 'Offre Introuvable', ["positionClass" => "toast-top-right"]);
+            return back();
+        }
     }
 
     /**
@@ -135,16 +143,32 @@ class CompanyController extends Controller
     public function edit($slug)
     {
         $user = User::where('slug',$slug)->first();
-        $companyfirst = Job::where('user_id',$user->id)->where('type',1)->first();
-        $companys = Job::where('user_id',$user->id)->where('type',1)->get();
-        return view('user.company.stage',compact('companys','companyfirst'));
+        $companyfirst = Job::where('user_id',$user->id)->where('type',1)->where('expiration_at','>=',Carbon::today())->where('status',1)->first();
+        if ($companyfirst) {
+            $companys = Job::where('user_id',$user->id)->where('type',1)->where('expiration_at','>=',Carbon::today())->where('status',1)->paginate(9);
+            return view('user.company.stage',compact('companys','companyfirst'));
+        }else {
+            Toastr::warning('Cette offres n\'est plus valide', 'Offre Introuvable', ["positionClass" => "toast-top-right"]);
+            return back();
+        }
     }
 
     public function detail($slug){
-        $job = Job::where('slug',$slug)->first();
-        $jobs = Job::where('type',$job->type)->get();
+        $job = Job::where('slug',$slug)->where('expiration_at','>=',Carbon::today())->where('status',1)->first();
+        $jobs = Job::where('type',$job->type)->where('expiration_at','>=',Carbon::today())->where('status',1)->get();
         $departements = Departement::all();
         return view('user.company.show',compact('job','jobs','departements'));
+    }
+
+    public function annonce()
+    {
+        $companys = Job::where('expiration_at','>=',Carbon::today())->where('status',1)->paginate(9);
+        if ($companys->count() > 1) {
+            return view('user.company.annonce',compact('companys'));
+        }else {
+            Toastr::warning('Cette offres n\'est plus valide', 'Offre Introuvable', ["positionClass" => "toast-top-right"]);
+            return back();
+        }
     }
 
     /**

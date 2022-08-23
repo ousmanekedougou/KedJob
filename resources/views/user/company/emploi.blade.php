@@ -74,12 +74,13 @@
 							<p>{{$company->resume}}</p>
 						</div>
 						<div class="service_style_one_button pt-3">
-							<a href="{{ route('company.detail',$company->slug) }}">Voire <i class="fa fa-long-arrow-right"></i></a>
+							<a href="{{ route('company.detail',$company->slug) }}">Postuler <i class="fa fa-long-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
 				@endforeach
 			</div>
+			{{ $companys->links('user.layouts.paginate') }}
 		</div>
 	</div>
 	<!--==================================================-->

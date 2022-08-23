@@ -12,7 +12,7 @@
 				<div class="col-lg-12">
 					<div class="breatcome_title">
 						<div class="breatcome_title_inner pb-2">
-							<h2>{{$companyfirst->user->name}} vous offres Plus de {{$companys->count()}} offres @if($companyfirst->type == 0) d'emplois @else de stages @endif pour vous servire</h2>
+							<h2>vous offres Plus de {{$companys->count()}} offres d'emplois et de stages pour vous servire</h2>
 						</div>
 						<div class="breatcome_content">
 							<ul>
@@ -20,7 +20,7 @@
 									fournir les meilleures solutions de l'information.</span></li>
 							</ul>
 							<div class="button text-center" style="padding-top:10px;">
-								<a class="active" href="{{ route('company.show',$companyfirst->user->slug) }}">Des offres d'emplois <i
+								<a class="active" href="{{ route('company.edit',$companyfirst->user->slug) }}">Des offres de stages <i
 										class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
@@ -46,10 +46,10 @@
 				<div class="col-lg-12">
 					<div class="section_title text_center mb-55">
 						<div class="section_sub_title uppercase mb-3">
-							<h6>OFFRES DE STAGES</h6>
+							<h6>OFFRES D'EMPLOIS</h6>
 						</div>
 						<div class="section_main_title">
-							<h1>Offres que nous fournissons</h1>
+							<h1>Emplois que nous fournissons</h1>
 						</div>
 						<div class="em_bar">
 							<div class="em_bar_bg"></div>
@@ -68,7 +68,7 @@
 							<img src="{{ $company->image }}" class="avatar-img rounded-circle" alt="" srcset="">
 						</div>
 						<div class="service_style_one_title mb-30">
-							<h4> <a href="{{ route('company.detail',$company->slug) }}"> {{$company->title}} </a></h4>
+							<h4><a href="{{ route('company.detail',$company->slug) }}"> {{$company->title}} </a></h4>
 						</div>
 						<div class="service_style_one_text">
 							<p>{{$company->resume}}</p>

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/','App\Http\Controllers\User\HomeController');
 Route::resource('/company','App\Http\Controllers\User\CompanyController');
 Route::get('/detail/{slug}', [App\Http\Controllers\User\CompanyController::class, 'detail'])->name('company.detail');
+Route::get('/company/annonce', [App\Http\Controllers\User\CompanyController::class, 'annonce'])->name('company.annonce');
 Route::get('/contact', [App\Http\Controllers\User\ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact/store', [App\Http\Controllers\User\ContactController::class, 'store'])->name('contact.store');
 Route::get('/blog', [App\Http\Controllers\User\BlogController::class, 'index'])->name('blog.index');
@@ -35,6 +36,7 @@ Route::prefix('/admin')->name('admin.')->group(function()
     Route::get('/employe', [App\Http\Controllers\Admin\JobController::class, 'employe'])->name('job.employe');
     Route::get('/stagiare', [App\Http\Controllers\Admin\JobController::class, 'stagiare'])->name('job.stagiare');
     Route::get('/annonce', [App\Http\Controllers\Admin\JobController::class, 'annonce'])->name('job.annonce');
+    Route::put('/view', [App\Http\Controllers\Admin\JobController::class, 'view'])->name('job.view');
     Route::resource('/localite', 'App\Http\Controllers\Admin\LocaliteController');
     Route::get('/commune', [App\Http\Controllers\Admin\LocaliteController::class, 'commune'])->name('localite.commune');
     Route::resource('/contact', 'App\Http\Controllers\Admin\ContactController');

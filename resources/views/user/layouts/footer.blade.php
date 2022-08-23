@@ -79,12 +79,12 @@
 						<h4 class="widget-title pb-4">Autres liens</h4>
 						<div class="menu-quick-link-container ml-4">
 							<ul id="menu-quick-link" class="menu">
-								<li><a href="#">Marketing Strategy</a></li>
-								<li><a href="#">Interior Design</a></li>
-								<li><a href="#">Digital Services</a></li>
-								<li><a href="#">Product Selling</a></li>
-								<li><a href="#">Product Design</a></li>
-								<li><a href="#">Social Marketing</a></li>
+								<li><a target="_blank" href="https://www.google.com/search?channel=fs&client=ubuntu&q=site+d%27offre+d%27emplois+et+stages&ibp=htl;jobs&sa=X&ved=2ahUKEwj689vTpbP5AhUNyRoKHV-yB6cQkd0GegQIBBAB#fpstate=tldetail&htivrt=jobs&htiq=site+d'offre+d'emplois+et+stages&htidocid=jeVCreILvXUAAAAAAAAAAA%3D%3D&sxsrf=ALiCzsat2mH8o7Yxy8g4YKGrNSVRX-bktw:1659825989030">Emplois & Stages</a></li>
+								<li><a href="https://offremplois.com/">Offremplois</a></li>
+								<li><a href="https://anpej.sn/offres-demploi-et-ou-de-stages/">anpej.sn</a></li>
+								<li><a href="https://www.emploidakar.com/">Emploi Dakar</a></li>
+								<li><a href="https://www.iagora.com/work/fr/stages-et-emplois/senegal">iAgora</a></li>
+								<li><a href="https://samabac.com/90-offres-au-senegal/">Les 90 offres d'emploi et de stages </a></li>
 							</ul>
 						</div>
 					</div>

@@ -30,6 +30,7 @@ class CreateRecrutementsTable extends Migration
             $table->boolean('type');
             $table->integer('user_id');
             $table->integer('job_id');
+            $table->boolean('view')->nullable();
             $table->timestamps();
         });
     }

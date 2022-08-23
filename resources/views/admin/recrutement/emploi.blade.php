@@ -29,6 +29,7 @@
 												<th>Telephone</th>
 												<th>Adresse</th>
 												<th>Demande</th>
+												<th>Status</th>
 												<th style="width: 10%">Action</th>
 											</tr>
 										</thead>
@@ -40,6 +41,7 @@
 												<th>Telephone</th>
 												<th>Adresse</th>
 												<th>Demande</th>
+												<th>Status</th>
 												<th style="width: 10%">Action</th>
 											</tr>
 										</tfoot>
@@ -62,6 +64,13 @@
 														<span class="btn btn-xs btn-primary">Emploi</span>
 													@else
 													<span class="btn btn-xs btn-info">Stage</span>
+													@endif
+												</td>
+												<td>
+													@if($emploi->view == 0)
+														<span class="btn btn-xs btn-primary">Non vue</span>
+													@else
+														<span class="btn btn-xs btn-success">Vue</span>
 													@endif
 												</td>
 												<td>

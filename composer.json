@@ -28,12 +28,24 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files":[
+            "app/Helpers/helper.php",
+            "app/Helpers/Sms.php",
+            "app/Helpers/OrangeMoney.php",
+            "app/Helpers/UserSystemInfoHelper.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "files":[
+            "app/Helpers/helper.php",
+            "app/Helpers/Sms.php",
+            "app/Helpers/OrangeMoney.php",
+            "app/Helpers/UserSystemInfoHelper.php"
+        ]
     },
     "scripts": {
         "post-autoload-dump": [
