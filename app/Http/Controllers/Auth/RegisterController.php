@@ -105,7 +105,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
             'adress' => $data['adress'],
             'is_admin' => $data['is_admin'],
-            'is_active' => 0,
+            'is_active' => 1,
             'image' => null,
             'password' => '$2y$10$ul/8vG9Wg8fVrVZBizWqr.nqEZmEaLazkkOEjmBbbNie/Kt4EKp6S', 
             // 'password' => Hash::make($data['password']),
