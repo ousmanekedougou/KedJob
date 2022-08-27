@@ -1,3 +1,99 @@
+
+<div class="modal fade" id="addRowModal-{{Auth::user()->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header no-bd">
+				<h5 class="modal-title">
+					<span class="fw-mediumbold">
+					Modifier vos information personnelle</span>
+				</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form method="POST" action="{{ route('register') }}">
+				@csrf
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group form-group-default">
+								<label>Nom Complet</label>
+								<input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') ?? Auth::user()->name }}"  autocomplete="name" autofocus placeholder="Nom Complet">
+								@error('name')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $message }}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="form-group form-group-default">
+								<label for="email">Adresse Email</label>
+									<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') ?? Auth::user()->email }}"  autocomplete="email" placeholder="Adresse Email">
+
+									@error('email')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
+							</div>
+						</div>
+						<div class="col-md-6 pr-0">
+							<div class="form-group form-group-default">
+								<label>Numero de telephone</label>
+								<input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') ?? Auth::user()->phone }}"  autocomplete="phone" placeholder="Numero de telephone">
+								@error('phone')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $message }}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group form-group-default">
+								<label>Adresse</label>
+								<input id="adress" type="text" class="form-control @error('adress') is-invalid @enderror" name="adress" value="{{ old('adress') ?? Auth::user()->adress }}"  autocomplete="adress" placeholder="Adresse">
+								@error('adress')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $message }}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+						<h6 class="text-center btn-block">Votre mot de passe</h6>
+						<div class="col-md-6 pr-0">
+							<div class="form-group form-group-default">
+								<label>Modifier le mot de passe</label>
+								<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  autocomplete="password" placeholder="Mot de passe">
+								@error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group form-group-default">
+								<label>Confirmer le mot de passe</label>
+								<input id="password-confirm" type="password" class="form-control " name="password_confirmation" value="{{ old('adress') }}"  autocomplete="password" placeholder="Confirmer le mot de passe">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">
+						{{ __('Ajouter') }}
+					</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
 <!--   Core JS Files   -->
 	<script src="{{('assets/js/core/jquery.3.2.1.min.js')}}"></script>
 	<script src="{{('assets/js/core/popper.min.js')}}"></script>

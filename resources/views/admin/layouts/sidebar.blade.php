@@ -29,20 +29,22 @@
 							<div class="collapse in" id="collapseExample">
 								<ul class="nav">
 									<li>
-										<a href="#profile">
-											<span class="link-collapse">My Profile</span>
+										<a href="#profile" data-toggle="modal" data-target="#addRowModal-{{Auth::user()->id}}" >
+											<span class="link-collapse">Mon Profile</span>
 										</a>
 									</li>
 									<li>
 										<a href="#edit">
-											<span class="link-collapse">Edit Profile</span>
+											<span class="link-collapse">Image</span>
 										</a>
 									</li>
-									<li>
-										<a href="#settings">
-											<span class="link-collapse">Settings</span>
-										</a>
-									</li>
+									@if(Auth::user()->is_admin == 0)
+										<li>
+											<a href="#settings">
+												<span class="link-collapse">Settings</span>
+											</a>
+										</li>
+									@endif
 								</ul>
 							</div>
 						</div>

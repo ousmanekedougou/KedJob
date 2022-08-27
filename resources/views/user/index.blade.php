@@ -221,7 +221,7 @@
 								</div>
 							</div>
 							<div class="feature_style_three_title">
-								<h4>Front-End design & development</h4>
+								<h4>Offres de stages pour tout les domaines</h4>
 							</div>
 							<div class="feature_style_three_text pt-3">
 								<p>Give you a complete account of the system and expound</p>
@@ -244,7 +244,7 @@
 								</div>
 							</div>
 							<div class="feature_style_three_title">
-								<h4>UX and UI design strategy</h4>
+								<h4>Offres d'emplois de tout les secteurs</h4>
 							</div>
 							<div class="feature_style_three_text pt-3">
 								<p>Give you a complete account of the system and expound</p>
@@ -267,7 +267,7 @@
 								</div>
 							</div>
 							<div class="feature_style_three_title">
-								<h4>Software development & solution</h4>
+								<h4>Des Services multi-informatiques</h4>
 							</div>
 							<div class="feature_style_three_text pt-3">
 								<p>Give you a complete account of the system and expound</p>

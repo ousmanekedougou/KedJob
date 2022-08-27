@@ -68,7 +68,7 @@ class RegisterController extends Controller
 
         event(new Registered($user = $this->create($request->all())));
 
-        $user->notify(new RegisteredUser);
+        // $user->notify(new RegisteredUser);
         Toastr::success('Votre compte a bien ete creer', 'Creation de compte', ["positionClass" => "toast-top-right"]);
         return back();
     }
@@ -107,9 +107,8 @@ class RegisterController extends Controller
             'is_admin' => $data['is_admin'],
             'is_active' => 1,
             'image' => null,
-            'password' => '$2y$10$ul/8vG9Wg8fVrVZBizWqr.nqEZmEaLazkkOEjmBbbNie/Kt4EKp6S', 
-            // 'password' => Hash::make($data['password']),
-            'confirmation_token' => str_replace('/','',Hash::make(Str::random(40))), 
+            'password' => Hash::make($data['password']),
+            // 'confirmation_token' => str_replace('/','',Hash::make(Str::random(40))), 
             'slug' =>  str_replace('/','',Hash::make(Str::random(10).'admin'.$data['email']))
         ]);
     }
