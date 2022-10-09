@@ -34,7 +34,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#edit">
+										<a href="#edit" data-toggle="modal" data-target="#addRowModalImage-{{Auth::user()->id}}" >
 											<span class="link-collapse">Image</span>
 										</a>
 									</li>

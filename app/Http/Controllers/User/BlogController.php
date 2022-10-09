@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     public function index(){
-        $blogs = Post::where('status',1)->get();
+        $blogs = Post::where('status',1)->paginate(9);
         return view('user.blog.index',compact('blogs'));
     }
 
@@ -18,3 +18,4 @@ class BlogController extends Controller
         return view('user.blog.show',compact('show_blog'));
     }
 }
+

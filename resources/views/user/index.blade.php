@@ -17,7 +17,7 @@
 								<div class="slider_text">
 									<div class="slider_text_inner">
 										<h5>Solution informatique totale ici</h5>
-										<h1>Meilleure agence de solutions informatiques</h1>
+										<h1>Meilleure solutions de recrutement</h1>
 										<h1>pour votre entreprise </h1>
 									</div>
 									<div class="slider_button pt-5 d-flex">
@@ -51,7 +51,7 @@
 								<div class="slider_text">
 									<div class="slider_text_inner">
 										<h5>Solution informatique totale ici</h5>
-										<h1>Meilleure agence de solutions informatiques</h1>
+										<h1>Meilleure solutions de recrutement</h1>
 										<h1>pour votre entreprise </h1>
 									</div>
 									<div class="slider_button pt-5 d-flex">
@@ -370,7 +370,7 @@ le meilleur matériel au monde</p>
 							<h6>TÉMOIGNAGE</h6>
 						</div>
 						<div class="section_main_title">
-							<h1>Que dit</h1>
+							<h1>Que disent</h1>
 							<h1>Nos clients satisfaits</h1>
 						</div>
 						<div class="em_bar">
@@ -394,7 +394,11 @@ le meilleur matériel au monde</p>
 												<p>{{ $temoign->text }}</p>
 											</div>
 											<div class="single_testimonial_thumb mt-2 mr-3">
-												<img src="{{Storage::url($temoign->image)}}" style="width: 50px;height:50px;" alt="" />
+												@if($temoign->image !== '')
+													<img src="{{Storage::url($temoign->image)}}" style="width: 50px;height:50px;" alt="" />
+												@else
+													<img src="{{ asset('user/assets/images/profil.gif') }}" style="width: 50px;height:50px;" alt="" />
+												@endif
 											</div>
 											<div class="single_testimonial_content_title mt-4">
 												<h4>{{$temoign->name}}</h4>
@@ -466,6 +470,7 @@ le meilleur matériel au monde</p>
 								</div>
 								<div class="col-lg-6">
 									<div class=" mb-30">
+										<label for="" class="text-white text-bold">Votre image de profile ( Facultatif )</label> <br>
 										<input id="image" type="file" class="@error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" required autocomplete="image" placeholder="Votre image">
 										@error('image')
 											<span class="invalid-feedback" role="alert">

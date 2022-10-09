@@ -22,7 +22,7 @@ class CompanyController extends Controller
     public function index()
     {
         $companys = User::where('is_admin',1)->where('is_active',1)
-        // ->where('confirmation_token',null)
+        ->where('confirmation_token',null)
         ->paginate(9);
         return view('user.company.index',compact('companys'));
     }
@@ -131,7 +131,7 @@ class CompanyController extends Controller
             $companys = Job::where('user_id',$user->id)->where('type',0)->where('expiration_at','>=',Carbon::today())->where('status',1)->paginate(9);
             return view('user.company.emploi',compact('companys','companyfirst'));
         }else {
-            Toastr::warning('Cette offres n\'est plus valide', 'Offre Introuvable', ["positionClass" => "toast-top-right"]);
+            Toastr::warning('Cette entreprise n\'a plus d\' offres d\'emplois', 'Offre Introuvable', ["positionClass" => "toast-top-right"]);
             return back();
         }
     }
@@ -150,7 +150,7 @@ class CompanyController extends Controller
             $companys = Job::where('user_id',$user->id)->where('type',1)->where('expiration_at','>=',Carbon::today())->where('status',1)->paginate(9);
             return view('user.company.stage',compact('companys','companyfirst'));
         }else {
-            Toastr::warning('Cette offres n\'est plus valide', 'Offre Introuvable', ["positionClass" => "toast-top-right"]);
+            Toastr::warning('Cette entreprise n\'a plus d\' offres de stages', 'Offre Introuvable', ["positionClass" => "toast-top-right"]);
             return back();
         }
     }

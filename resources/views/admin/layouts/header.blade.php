@@ -236,9 +236,9 @@
 								aria-expanded="false">
 								<div class="avatar-sm">
 									@if(Auth::user()->companyLogo != NULL)
-									<img src="{{ Auth::user()->companyLogo }}" alt="..." class="avatar-img rounded-circle">
+										<img src="{{ Auth::user()->companyLogo }}" alt="..." class="avatar-img rounded-circle">
 									@else
-									<img src="{{asset('admin/assets/img/profil.jpg')}}" alt="..." class="avatar-img rounded-circle">
+										<img src="{{asset('admin/assets/img/profil.jpg')}}" alt="..." class="avatar-img rounded-circle">
 									@endif
 								</div>
 							</a>
@@ -255,8 +255,11 @@
 												</div>
 											<div class="u-text">
 												<h4>{{ Auth::user()->name }}</h4>
-												<p class="text-muted">{{ Auth::user()->email }}</p><a href="profile.html"
+												<p class="text-muted">{{ Auth::user()->email }}</p>
+												<a href="" data-toggle="modal" data-target="#addRowModal-{{Auth::user()->id}}"
 													class="btn btn-xs btn-secondary btn-sm">Profile</a>
+												<a href="" data-toggle="modal" data-target="#addRowModalImage-{{Auth::user()->id}}"
+													class="btn btn-xs btn-secondary btn-sm">Image</a>
 											</div>
 										</div>
 									</li>

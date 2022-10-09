@@ -41,10 +41,10 @@ class RegisteredUser extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Inscription sur KedJobs')
-            ->line('Votre compte entreprise a bien ete creer , il vous reste de la confirmer')
+            ->subject('Comfirmation de compte sur KedJobs')
+            ->line('Votre compte entreprise a bien ete creer , il vous reste de le confirmer')
             ->action('Confimer mon compte', url("confirm/{$notifiable->id}/".urlencode($notifiable->confirmation_token)))
-            ->line('Thank you for using our application!');
+            ->line('Merci pour l\'attention que vous prorte a notre agence !');
     }
 
     /**

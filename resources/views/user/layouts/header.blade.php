@@ -53,7 +53,7 @@
 							{{--<img src="{{asset('user/assets/images/1.png')}}" alt="" />--}}
 							<h1 class="text-primary active dtbtn">KedJobs</h1>
 						</a>
-						<a class="main_sticky" href="{{ url('/') }}" title="techno">
+						<a class="main_sticky" href="{{ url('/') }}" title="KedJobs">
 							{{--<img src="{{asset('user/assets/images/logo.png')}}" alt="KedJobs" />--}}
 							<h1 class="text-white">KedJobs</h1>
 						</a>
@@ -64,9 +64,9 @@
 						<ul class="nav_scroll">
 							<li><a href="{{ url('/') }}">  Acceuil</a></li>
 							<li><a href="{{ route('company.index') }}">  Entreprise</a></li>
-							<li><a href="">  Anonces</a></li>
-							<li><a href=""> Nos Services</a></li>
-							{{--<li><a href="{{ route('blog.index') }}">  Blog</a></li>--}}
+							{{--<li><a href="">  Anonces</a></li>
+							<li><a href=""> Nos Services</a></li>--}}
+							<li><a href="{{ route('blog.index') }}">  Blog</a></li>
 							<li><a href="{{ route('contact.index') }}">  Contact</a></li>
 							{{--
 								<li><a href="#contact">Contact</a>
@@ -108,9 +108,9 @@
 				<ul class="nav_scroll">
 					<li><a href="{{ url('/') }}">   Acceuil</a></li>
 					<li><a href="{{ route('company.index') }}">  Entreprise</a></li>
-					<li><a href="{{ route('company.annonce') }}"> Anonces</a></li>
+					{{--<li><a href="{{ route('company.annonce') }}"> Anonces</a></li>--}}
 					{{--<li><a href=""> Nos Services</a></li>--}}
-					{{--<li><a href="{{ route('blog.index') }}"> Blog</a></li>--}}
+					<li><a href="{{ route('blog.index') }}"> Blog</a></li>
 					<li><a href="{{ route('contact.index') }}"> Contact</a></li>
 					{{--
 					<li><a href="#contact">Contact</a>

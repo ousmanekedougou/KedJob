@@ -12,7 +12,7 @@
 				<div class="col-lg-12">
 					<div class="breatcome_title">
 						<div class="breatcome_title_inner pb-2">
-							<h2>Blog Gird</h2>
+							<h2>Article Gird</h2>
 						</div>
 						<div class="breatcome_content">
 							<ul>
@@ -62,15 +62,7 @@
 			<!-- start pagination -->
 			<div class="row">
 				<div class="col-md-12">
-					<div class="paginations">				
-						<ul class="page-numbers">
-							<li><span aria-current="page" class="page-numbers current">1</span></li>
-							<li><a class="page-numbers" href="#">2</a></li>
-							<li><a class="page-numbers" href="#">3</a></li>
-							<li><a class="page-numbers" href="#">4</a></li>
-							<li><a class="next page-numbers" href="#"><i class="fa fa-long-arrow-right"></i></a></li>
-						</ul>
-					</div>
+					{{ $blogs->links('user.layouts.paginate') }}
 				</div>
 			</div>
 		</div>

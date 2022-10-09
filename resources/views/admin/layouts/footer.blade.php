@@ -11,8 +11,9 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<form method="POST" action="{{ route('register') }}">
+			<form method="POST" action="{{ route('admin.profile.info') }}">
 				@csrf
+				 {{ method_field('PUT') }}
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-sm-12">
@@ -64,7 +65,7 @@
 						<div class="col-md-6 pr-0">
 							<div class="form-group form-group-default">
 								<label>Modifier le mot de passe</label>
-								<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}"  autocomplete="password" placeholder="Mot de passe">
+								<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"   autocomplete="new-password" placeholder="Votre mot de passe">
 								@error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -75,7 +76,7 @@
 						<div class="col-md-6">
 							<div class="form-group form-group-default">
 								<label>Confirmer le mot de passe</label>
-								<input id="password-confirm" type="password" class="form-control " name="password_confirmation" value="{{ old('adress') }}"  autocomplete="password" placeholder="Confirmer le mot de passe">
+								<input id="password-confirm" type="password" class="form-control " name="password_confirmation"  autocomplete="new-password" placeholder="Confirmer le mot de passe">
 								
 							</div>
 						</div>
@@ -83,7 +84,73 @@
 				</div>
 				<div class="modal-footer">
 					<button type="submit" class="btn btn-primary">
-						{{ __('Ajouter') }}
+						{{ __('Modifier') }}
+					</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="addRowModalImage-{{Auth::user()->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header no-bd">
+				<h5 class="modal-title">
+					<span class="fw-mediumbold">
+					Modifier votre image de profile</span>
+				</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form method="POST" action="{{ route('admin.profile.image') }}" enctype="multipart/form-data">
+				@csrf
+				 {{ method_field('PUT') }}
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-3 text-center">
+							<div class="avatar-lg text-center">
+								<img class="avatar-img rounded-circle" src="{{ Auth::user()->image }}" alt="" srcset="">
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="form-group form-group-default">
+								<label>Modifier votre image de profile</label>
+								<input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') ?? Auth::user()->image }}"  autocomplete="image" autofocus placeholder="Nom Complet">
+								@error('image')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $message }}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+
+						@if(Auth::user()->is_admin == 1 )
+							<div class="col-sm-3 text-center">
+								<div class="avatar-lg text-center">
+									<img class="avatar-img rounded-circle" src="{{ Auth::user()->companyLogo }}" alt="" srcset="">
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<div class="form-group form-group-default">
+									<label>Modifier le logo de votre entreprise</label>
+									<input id="logo" type="file" class="form-control @error('logo') is-invalid @enderror" name="logo" value="{{ old('logo') ?? Auth::user()->companyLogo }}"  autocomplete="logo" autofocus placeholder="Nom Complet">
+									@error('logo')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
+								</div>
+							</div>
+						@endif
+					</div>
+				</div>
+				<div class="modal-footer text-center">
+					<button type="submit" class="btn btn-primary">
+						{{ __('Modifier Image') }}
 					</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
 				</div>

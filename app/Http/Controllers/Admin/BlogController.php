@@ -70,6 +70,7 @@ class BlogController extends Controller
         ]);
         $post->tags()->sync($request->tag);
         $post->categorys()->sync($request->category);
+        
         Toastr::success('Votre article a ete ajouter avec succes', 'Ajout d\'offre', ["positionClass" => "toast-top-right"]);
         return back();
     }
