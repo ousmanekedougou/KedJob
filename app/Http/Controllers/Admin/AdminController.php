@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use phpDocumentor\Reflection\Types\Null_;
 
 class AdminController extends Controller
@@ -99,7 +100,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        User::where('id',$id)->delete();
+        $user = User::where('id',$id)->first();
+        Storage::delete($user->image);
+        $user->delete();
         Toastr::success('Ce compte a ete supprimer avec succes', 'Compte Supprimer', ["positionClass" => "toast-top-right"]);
         return back();
     }

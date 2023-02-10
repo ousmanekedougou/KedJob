@@ -13,7 +13,7 @@
 								<h5 class="text-white op-7 mb-2">Tous les administrateurs et entreprise</h5>
 							</div>
 							<div class="ml-md-auto py-2 py-md-0">
-								<a data-toggle="modal" data-target="#addRowModal" class="btn btn-white btn-border btn-round mr-2"><i class="fa fa-plus"></i> Ajouter</a>
+								<a data-toggle="modal" data-target="#addRowModal" class="btn btn-white btn-border btn-round mr-2"><i class="fa fa-plus"></i> Ajouter un administrateur</a>
 							</div>
 						</div>
 					</div>
@@ -89,15 +89,20 @@
 															<div class="col-md-12">
 																<div class="form-check">
 																	<label>Status</label><br />
-																	<label class="form-radio-label">
+																	<label class="form-radio-label btn btn-success btn-xs text-white">
 																		<input id="is_admin" class="form-radio-input" type="radio" name="is_admin"
 																			value="0" class="@error('is_admin') is-invalid @enderror">
 																		<span class="form-radio-sign">Admin</span>
 																	</label>
-																	<label class="form-radio-label ml-3">
+																	<label class="form-radio-label ml-3 btn btn-primary btn-xs text-white">
 																		<input id="is_admin" class="form-radio-input" type="radio" name="is_admin"
 																			value="1" class="@error('is_admin') is-invalid @enderror">
 																		<span class="form-radio-sign">Entreprise</span>
+																	</label>
+																	<label class="form-radio-label ml-3 btn btn-info btn-xs text-white">
+																		<input id="is_admin" class="form-radio-input" type="radio" name="is_admin"
+																			value="2" class="@error('is_admin') is-invalid @enderror">
+																		<span class="form-radio-sign">Particulier</span>
 																	</label>
 																	@error('is_admin')
 																		<span class="invalid-feedback" role="alert">
@@ -127,7 +132,6 @@
 													<th>Nom Complet</th>
 													<th>Email</th>
 													<th>Phone</th>
-													<th>Adresse</th>
 													<th>Status</th>
 													<th>Compte</th>
 													<th style="width: 10%">Action</th>
@@ -139,7 +143,6 @@
 													<th>Nom Complet</th>
 													<th>Email</th>
 													<th>Phone</th>
-													<th>Adresse</th>
 													<th>Status</th>
 													<th>Compte</th>
 													<th style="width: 10%">Action</th>
@@ -158,12 +161,13 @@
 													<td>{{$admin->name}}</td>
 													<td>{{$admin->email}}</td>
 													<td>{{$admin->phone}}</td>
-													<td>{{$admin->adress}}</td>
 													<td>
 														@if($admin->is_admin == 0)
 															<span class="btn btn-xs btn-primary">Admin</span>
+														@elseif($admin->is_admin == 1)
+														<span class="btn btn-xs btn-success">Entreprise</span>
 														@else
-														<span class="btn btn-xs btn-info">Entreprise</span>
+														<span class="btn btn-xs btn-info">Particulier</span>
 														@endif
 													</td>
 													<td>

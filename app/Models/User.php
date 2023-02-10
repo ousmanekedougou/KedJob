@@ -60,4 +60,8 @@ class User extends Authenticatable
     public function recrutements(){
         return $this->hasMany(Recrutement::class);
     }
+
+    public function domaines(){
+        return $this->hasMany(Domaine::class);
+    }
 }

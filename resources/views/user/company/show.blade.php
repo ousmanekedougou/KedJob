@@ -13,7 +13,7 @@
 					<div class="breatcome_title">
 						<div class="breatcome_title_inner pb-2">
 							<h2>
-								{{$job->user->name}} vous offres Plus de {{$jobs->count()}} offres @if($job->type == 0) d'emplois @else se stages @endif pour vous servire
+								{{$job->user->name}} vous offres Plus de {{$jobs->count()}} offres @if($job->type == 0) d'emplois @else de stages @endif pour vous servire
 							</h2>
 						</div>
 						<div class="breatcome_content">

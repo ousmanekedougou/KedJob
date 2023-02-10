@@ -40,6 +40,21 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::create([
+            'name' => 'Ansoumani Keita',
+            'email' => 'keitaansoumani@gmail.com',
+            'phone' => $faker->phoneNumber(),
+            'adress' => 'Kedougou',
+            'image' => $faker->imageUrl(50, 50),
+            'is_admin' => 0,
+            'is_active' => 1,
+            'confirmation_token' => Null,
+            'slug' => $faker->slug(),
+            'password' => '$2y$10$ul/8vG9Wg8fVrVZBizWqr.nqEZmEaLazkkOEjmBbbNie/Kt4EKp6S',
+            'companyLogo' => $faker->imageUrl(50, 50), 
+            'about' => $faker->text() 
+        ]);
+
+        User::create([
             'name' => 'Mako Gold',
             'email' => 'mako@gmail.com',
             'phone' => $faker->phoneNumber(),

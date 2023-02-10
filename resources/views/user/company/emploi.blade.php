@@ -12,7 +12,7 @@
 				<div class="col-lg-12">
 					<div class="breatcome_title">
 						<div class="breatcome_title_inner pb-2">
-							<h2>{{$companyfirst->user->name}} vous offres Plus de {{$companys->count()}} offres @if($companyfirst->type == 0) d'emplois @else se stages @endif pour vous servire</h2>
+							<h2>{{$companyfirst->user->name}} vous offres Plus de {{$companys->count()}} offres @if($companyfirst->type == 0) d'emplois @else de stages @endif pour vous servire</h2>
 						</div>
 						<div class="breatcome_content">
 							<ul>

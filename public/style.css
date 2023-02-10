@@ -303,18 +303,18 @@ a.dtbtn:hover {
 --<	Techno Slider Area Css -->
 ======================================================*/
 .slider1 {
-    background-image: url(user/assets/images/slider/slider-1.png);
+    background-image: url(user/assets/images/slider/sliderD2.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 900px;
+    height: 600px;
 }
 .slider2 {
-    background-image: url(user/assets/images/slider/slider-2.png);
+    background-image: url(user/assets/images/slider/sliderD4.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 900px;
+    height: 550px;
 }
 .slider3 {
     background-image: url(assets/images/slider/slider-3.png);

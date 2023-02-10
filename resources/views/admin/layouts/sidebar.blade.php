@@ -61,7 +61,7 @@
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
-							<h4 class="text-section">Components</h4>
+							<h4 class="text-section">Composants</h4>
 						</li>
 						@if(Auth::user()->is_admin == 0)
 							<li class="nav-item">
@@ -198,6 +198,59 @@
 									</ul>
 								</div>
 							</li>
+						@endif
+
+
+						@if(Auth::user()->is_admin == 2)
+						{{--
+							<li class="nav-item">
+								<a data-toggle="collapse" href="#sidebarLayouts">
+									<i class="fas fa-th-list"></i>
+									<p>Vos offres</p>
+									<span class="caret"></span>
+								</a>
+								<div class="collapse" id="sidebarLayouts">
+									<ul class="nav nav-collapse">
+										<li>
+											<a href="{{ route('admin.job.index') }}">
+												<span class="sub-item">Emplois</span>
+											</a>
+										</li>
+										<li>
+											<a href="{{ route('admin.job.stage') }}">
+												<span class="sub-item">Stages</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="nav-section">
+								<hr>
+							</li>
+
+							<li class="nav-item">
+								<a data-toggle="collapse" href="#sidebarRecrutement">
+									<i class="fas fa-th-list"></i>
+									<p>Recrutements</p>
+									<span class="caret"></span>
+								</a>
+								<div class="collapse" id="sidebarRecrutement">
+									<ul class="nav nav-collapse">
+										<li>
+											<a href="{{ route('admin.job.employe') }}">
+												<span class="sub-item">Employes</span>
+											</a>
+										</li>
+										<li>
+											<a href="{{ route('admin.job.stagiare') }}">
+												<span class="sub-item">Stagiares</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						--}}
 						@endif
 						
 					</ul>

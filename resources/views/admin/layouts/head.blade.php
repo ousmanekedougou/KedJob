@@ -23,3 +23,7 @@
 	<link rel="stylesheet" href="{{asset('admin/assets/css/demo.css')}}">
 
 	<link rel="stylesheet" href="{{ asset ('admin/assets/css/toastr.min.css')}}">
+
+	@section('headsection')
+ 
+ 	@show

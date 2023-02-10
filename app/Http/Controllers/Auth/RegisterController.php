@@ -86,7 +86,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'numeric', 'min:13', 'unique:users'],
             'adress' => ['required', 'string', 'max:255'],
-            'is_admin' => ['required', 'boolean'],
+            'is_admin' => ['required', 'numeric'],
             // 'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -107,7 +107,7 @@ class RegisterController extends Controller
             'is_admin' => $data['is_admin'],
             'is_active' => 1,
             'image' => null,
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make('password'),
             // 'confirmation_token' => str_replace('/','',Hash::make(Str::random(40))), 
             'slug' =>  str_replace('/','',Hash::make(Str::random(10).'admin'.$data['email']))
         ]);
